@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import Hero from "./components/Hero";
 
 function App() {
-  return (
-    <div className='text-2xl text-orange-600 font-bold font-circular-web'>App d</div>
-  )
+  return <main className="relative min-h-screen w-screen overflow-x-hidden">
+    <Hero></Hero>
+  </main>;
 }
 
-export default App
+export default App;
