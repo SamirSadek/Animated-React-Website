@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    width: 100dvw;
+    /* 
+       - "dvw" stands for **dynamic viewport width**, which adapts to changes 
+         in viewport size, even when browser UI elements (like the address bar) 
+         expand or collapse.
+       - "100dvw" makes the body span the full viewport width dynamically.
+    */
+  
+    overflow-x: hidden;
+    /* 
+       - Prevents horizontal scrolling.
+       - Useful when dealing with layouts that may cause unwanted side-scrolling.
+    */
+  
+    background-color: #dfdff0;
+    /* 
+       - Sets the background color to a light blue/violet shade (#DFDFF0).
+       - This matches the blue-50 color defined in your Tailwind config.
+    */
+  
+    font-family: "General Sans", sans-serif;
+    /* 
+       - Sets the font to "General Sans" as the primary font.
+       - If "General Sans" isn't available, it falls back to a generic sans-serif font.
+       - Make sure "General Sans" is either imported via @font-face or available from an external source (e.g., Google Fonts).
+    */
+  }
+  
+
+@layer base {  
+    /* 
+       The @layer directive is used in Tailwind CSS to define different layers 
+       of styles. The "base" layer is typically used for global styles like 
+       typography, resets, and font imports.
+    */
+
+    @font-face {
+        font-family: "circular-web"; /* Name of the font to be used in CSS */
+        src: url("/fonts/circularweb-book.woff2") format("woff2"); 
+        /* Specifies the location of the font file and its format */
+    }
+
+    @font-face {
+        font-family: "general";
+        src: url("/fonts/general.woff2") format("woff2");
+        /* The "woff2" format is widely used for web fonts due to its better compression */
+    }
+
+    @font-face {
+        font-family: "robert-medium";
+        src: url("/fonts/robert-medium.woff2") format("woff2");
+        /* Defines another custom font called "robert-medium" */
+    }
+
+    @font-face {
+        font-family: "robert-regular";
+        src: url("/fonts/robert-regular.woff2") format("woff2");
+        /* Defines a variation of the Robert font with "regular" weight */
+    }
+
+    @font-face {
+        font-family: "zentry";
+        src: url("/fonts/zentry-regular.woff2") format("woff2");
+        /* Defines another custom font "zentry" */
+    }
+}
